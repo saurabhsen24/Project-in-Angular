@@ -1,0 +1,16 @@
+<div *ngIf = 'invalidLogin' class = "alert alert-warning">
+  {{errorMessage}}
+</div>
+
+<div class="form-inline">
+    <div class="form-group">
+      <label for = "username">User Name :</label>
+      <input type = "text" class = "form-control" id = "username" name = "username" [(ngModel)] = "username">
+    </div>
+    <div class = "form-group">
+      <label for = "pwd">Password:</label>
+      <input type = "password" class="form-control" id = "password" [(ngModel)] = "password">
+    </div>
+
+    <button (click) = handleJWTAuthLogin() class="btn btn-success">Login</button>
+</div>
